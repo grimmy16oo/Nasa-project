@@ -1,0 +1,44 @@
+/* Make map fill screen and responsive */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+/* Responsive popup card */
+.popup-card {
+  background: white;
+  padding: 5px;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  max-width: 250px;
+  width: 90%; /* responsive */
+  box-sizing: border-box;
+}
+
+.popup-card h3 {
+  margin: 0 0 6px;
+  font-size: 1rem; /* scales with device */
+  color: #2c3e50;
+}
+
+.popup-card p {
+  margin: 4px 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Adjust popup content for small screens */
+@media (max-width: 600px) {
+  .popup-card {
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bangladesh Map</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+  <div id="map"></div>
+
+  <!-- Mirpur -->
+  <div id="mirpur-popup" style="display:none;">
+    <div class="popup-card">
+      <h3>Mirpur</h3>
+      <p>High population density, mainly residential.</p>
+      <p style="color:red;"><strong>⚠ Overpopulated Area</strong></p>
+    </div>
+  </div>
+
+  <!-- Gulshan -->
+  <div id="gulshan-popup" style="display:none;">
+    <div class="popup-card">
+      <h3>Gulshan</h3>
+      <p>Business hub with offices and embassies.</p>
+      <p style="color:orange;"><strong>Moderate Density</strong></p>
+    </div>
+  </div>
+
+  <!-- Motijheel -->
+  <div id="motijheel-popup" style="display:none;">
+    <div class="popup-card">
+      <h3>Motijheel</h3>
+      <p>Commercial & financial district, crowded during work hours.</p>
+      <p style="color:red;"><strong>⚠ Overpopulated Area</strong></p>
+    </div>
+  </div>
+
+  <!-- Uttara -->
+  <div id="uttara-popup" style="display:none;">
+    <div class="popup-card">
+      <h3>Uttara</h3>
+      <p>Growing residential & commercial zone, densely populated.</p>
+      <p style="color:red;"><strong>⚠ Overpopulated Area</strong></p>
+    </div>
+  </div>
+
+  <!-- Dhanmondi -->
+  <div id="dhanmondi-popup" style="display:none;">
+    <div class="popup-card">
+      <h3>Dhanmondi</h3>
+      <p>High residential density, lots of greenery.</p>
+      <p style="color:green;"><strong>Good Greenery</strong></p>
+    </div>
+  </div>
+
+  <!-- Banani -->
+  <div id="banani-popup" style="display:none;">
+    <div class="popup-card">
+      <h3>Banani</h3>
+      <p>Residential and commercial area, moderate greenery.</p>
+      <p style="color:orange;"><strong>Moderate Density</strong></p>
+    </div>
+  </div>
+
+  <!-- Mohammadpur -->
+  <div id="mohammadpur-popup" style="display:none;">
+    <div class="popup-card">
+      <h3>Mohammadpur</h3>
+      <p>Residential area with medium density.</p>
+      <p style="color:orange;"><strong>Moderate Density</strong></p>
+    </div>
+  </div>
+
+  <!-- Kamalapur -->
+  <div id="kamalapur-popup" style="display:none;">
+    <div class="popup-card">
+      <h3>Kamalapur</h3>
+      <p>Central transport hub, high population density.</p>
+      <p style="color:red;"><strong>⚠ Overpopulated Area</strong></p>
+    </div>
+  </div>
+
+  <!-- Shantinagar -->
+  <div id="shantinagar-popup" style="display:none;">
+    <div class="popup-card">
+      <h3>Shantinagar</h3>
+      <p>Old commercial area, densely populated.</p>
+      <p style="color:red;"><strong>⚠ Overpopulated Area</strong></p>
+    </div>
+  </div>
+
+  <!-- Tejgaon -->
+  <div id="tejgaon-popup" style="display:none;">
+    <div class="popup-card">
+      <h3>Tejgaon</h3>
+      <p>Industrial & commercial zone.</p>
+      <p style="color:orange;"><strong>Moderate Density</strong></p>
+    </div>
+  </div>
+
+  <!-- Mohakhali -->
+  <div id="mohakhali-popup" style="display:none;">
+    <div class="popup-card">
+      <h3>Mohakhali</h3>
+      <p>Business & residential area, medium density.</p>
+      <p style="color:orange;"><strong>Moderate Density</strong></p>
+    </div>
+  </div>
+
+  <!-- Paltan -->
+  <div id="paltan-popup" style="display:none;">
+    <div class="popup-card">
+      <h3>Paltan</h3>
+      <p>Busy transport & commercial area.</p>
+      <p style="color:red;"><strong>⚠ Overpopulated Area</strong></p>
+    </div>
+  </div>
+
+  <!-- Sadarghat -->
+  <div id="sadarghat-popup" style="display:none;">
+    <div class="popup-card">
+      <h3>Sadarghat</h3>
+      <p>River port, very crowded.</p>
+      <p style="color:red;"><strong>⚠ Overpopulated Area</strong></p>
+    </div>
+  </div>
+
+  <!-- Lalbagh -->
+  <div id="lalbagh-popup" style="display:none;">
+    <div class="popup-card">
+      <h3>Lalbagh</h3>
+      <p>Historical area with moderate residential population.</p>
+      <p style="color:orange;"><strong>Moderate Density</strong></p>
+    </div>
+  </div>
+
+  <!-- Kotwali -->
+  <div id="kotwali-popup" style="display:none;">
+    <div class="popup-card">
+      <h3>Kotwali</h3>
+      <p>Old Dhaka administrative area, densely populated.</p>
+      <p style="color:red;"><strong>⚠ Overpopulated Area</strong></p>
+    </div>
+  </div>
+
+  <!-- Shahbagh -->
+  <div id="shahbagh-popup" style="display:none;">
+    <div class="popup-card">
+      <h3>Shahbagh</h3>
+      <p>Educational & cultural hub, medium density.</p>
+      <p style="color:orange;"><strong>Moderate Density</strong></p>
+    </div>
+  </div>
+
+  <!-- New Market -->
+  <div id="newmarket-popup" style="display:none;">
+    <div class="popup-card">
+      <h3>New Market</h3>
+      <p>Commercial & shopping area, very busy.</p>
+      <p style="color:red;"><strong>⚠ Overpopulated Area</strong></p>
+    </div>
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
